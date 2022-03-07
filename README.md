@@ -70,7 +70,7 @@ services:
     container_name: veracode-ism
     hostname: veracode-ism
     restart: always
-    command: "--token ${TOKEN} --key ${APIKEY}"
+    command: "--token ${TOKEN} --key ${API_KEY}"
 
   web-application:
     image: myapp:latest
@@ -81,7 +81,7 @@ services:
 For handling the Token and API Key it is recommended these are stored outside of your compose file. Docker compose has native support for environment variables. For example:
 ```
 $ export TOKEN=<ISM_TOKEN>
-$ export KEY=<ISM_API_KEY>
+$ export API_KEY=<ISM_API_KEY>
 
 $ docker-compose up -d
 ```
@@ -90,7 +90,7 @@ Alternatively you could place the values within a **.env** file inside the same 
 Example **.env** file for docker-compose:
 ```
 TOKEN=<ISM_TOKEN>
-KEY=<ISM_API_KEY>
+API_KEY=<ISM_API_KEY>
 ```
 
 In this example the Veracode DAST scanning engine would be configured to scan http://myapp.local
