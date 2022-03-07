@@ -14,7 +14,7 @@ This is not an official Veracode project.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Pre-built (armv7 / amd64) versions of the veracode-ism image is available on docker hub [hub.docker.com/veracode-ism](https://hub.docker.com/r/wasptree/veracode-ism) (Updated daily)
+Pre-built (armv7 / amd64) versions of the veracode-ism image is available on docker hub [hub.docker.com/veracode-ism](https://hub.docker.com/r/wasptree/veracode-ism)
 
 Alternatively build a local image from this repository:
 
