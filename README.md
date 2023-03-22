@@ -31,9 +31,11 @@ Alternatively build a local image from this repository:
 ## Setup
 
 The ISM requires both a valid **Token** and **API Key** to successfully negotiate a secure tunnel.
-The veracode-ism can be run initially with just the ISM token to register and generate a valid API Key.
+The veracode-ism must be run initially with just the ISM token to register and generate a valid API Key.
 
 1. Generate a valid ISM token in the Verecode management console: [Veracode Analysis Centre](https://analysiscenter.veracode.com/)
+Select Add Endpoint > Linux Endpoint > Copy the Endpoint Key/Token, to register as follows.
+
 2. Run the container to register the ISM token and generate an API Key
    ```sh
    docker run -it wasptree/veracode-ism --token <ism_token>
