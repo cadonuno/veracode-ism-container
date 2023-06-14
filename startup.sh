@@ -7,6 +7,14 @@ PROXYGATEWAYONLY=true
 PROXYRESOLVEHOSTGATEWAY=true
 RESOLVEHOSTURLS=true
 
+cleanup() {
+    echo "Received SIGTERM signal. Stopping the container gracefully..."
+    # Add cleanup logic here if needed
+    exit 0
+}
+
+trap cleanup SIGTERM
+
 while [ $# -gt 0 ] ; do
 	case $1 in
 		-t | --token) TOKEN="$2" ;;
@@ -62,7 +70,7 @@ then
 	echo -n $APIKEY > /usr/src/myapp/ism/veracode_ism/.mvsa_api_key
 	cd /usr/src/myapp/ism/veracode_ism && java -jar endpoint.jar &
 #Time limit on test conditions
-	EXPIRE=$((SECONDS+300))
+	EXPIRE=$((SECONDS+45))
 	while [ $SECONDS -lt $EXPIRE ]
 	do
 	   if [ -f $ENDPOINT_LOG ] 
@@ -82,6 +90,8 @@ then
 		fi
 		sleep 0.1
 	done
+	echo "[!] Error whilst registering endpoint"
+	exit 1
 elif [ ! -z $APIKEY ] && [ ! -z $TOKEN ]
 then
 	echo "[+] ISM API key and Token provided, attempting to connect to Veracode platform"
