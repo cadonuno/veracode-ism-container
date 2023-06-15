@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 #Install dependencies
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
+RUN apt upgrade -y
 RUN cat /etc/apt/sources.list
 RUN apt install -y openjdk-8-jre-headless unzip --fix-missing
 
