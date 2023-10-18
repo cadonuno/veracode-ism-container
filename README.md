@@ -82,7 +82,7 @@ services:
     container_name: veracode-ism
     hostname: veracode-ism
     restart: always
-    command: "--token ${TOKEN} --key ${APIKEY}"
+    command: "--token ${TOKEN} --key ${KEY}"
 
   web-application:
     image: myapp:latest
