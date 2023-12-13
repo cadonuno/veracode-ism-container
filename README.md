@@ -1,4 +1,4 @@
-> Current ISM Version - 23.9.0
+> Current ISM Version - 23.12.1
 <!-- ABOUT THE PROJECT -->
 ## About This Project
 
