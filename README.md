@@ -65,6 +65,9 @@ Once running the ism agent will show as Online in the Veracode platform.
 ## Usage Examples
 
 
+### AWS and Azure ### 
+A full step-by-step document on deploying to AWS and Azure can be found [here](Veracode%20ISM%20Azure%20and%20AWS.docx)
+
 ### Docker Compose
 It is likely that you will want to include the veracode-ism in a docker-compose file alongside the application you are scanning.
 
@@ -106,9 +109,3 @@ KEY=<ISM_API_KEY>
 ```
 
 In this example the Veracode DAST scanning engine would be configured to scan http://myapp.local
-
-
-<!-- To Do -->
-## To Do
-
-1. Add examples folder with docker-compose examples
