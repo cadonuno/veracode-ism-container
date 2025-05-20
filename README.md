@@ -1,5 +1,6 @@
-## About This Project
+Based on original project by [wasptree](https://github.com/wasptree)
 
+## About This Project
 
 veracode-ism-container is a containerised implementation of Veracode's Internal Scanning Manager (ISM).
 
