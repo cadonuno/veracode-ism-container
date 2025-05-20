@@ -11,6 +11,9 @@ This is not an official Veracode project.
 
 ## Getting Started
 
+- Make sure you have a Gateway set up in Veracode before starting.
+- If needed, the Ubuntu version can be updated under the DockerFile
+
 <!-- USAGE EXAMPLES -->
 ## Usage Examples
 
